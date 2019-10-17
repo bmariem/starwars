@@ -1,0 +1,47 @@
+.navbar {
+  padding: 1rem;
+
+  @include media-breakpoint-down(xs) {
+    padding: .3rem 1rem;
+  }
+
+  .navbar-brand {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-right: 0;
+
+    &.logo {
+      img {
+        object-fit: contain;
+        display: block;
+        margin: auto;
+        width: 126.5px;
+        height: 22px;
+
+        @include media-breakpoint-down(xs) {
+          width: 86px;
+          height: 15px;
+          margin: initial;
+        }
+      }
+    }
+
+    &.edit {
+      font-family: $font-family;
+      text-align: center;
+      color: $text-color;
+      font-size: .875rem;
+      font-weight: bold;
+
+      @include media-breakpoint-down(xs) {
+        text-align: right;
+      }
+
+      span {
+        @include media-breakpoint-down(xs) {
+          display: none;
+        }
+      }
+    }
+  }
+}

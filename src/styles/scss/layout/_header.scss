@@ -1,0 +1,17 @@
+header {
+    background-color: $white;
+    height: 3.75rem;
+    user-select: none;
+
+    @include media-breakpoint-down(xs) {
+        height: 2.5rem;
+    }
+
+    .progressive-bar {
+        .progress {
+            width: 50%;
+            background-color: $progress-bar;
+            height: 3px;
+        }
+    }
+}
