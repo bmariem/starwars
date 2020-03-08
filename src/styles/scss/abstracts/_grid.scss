@@ -1,0 +1,63 @@
+// breakpoint vars
+$break-320: 20em;
+$break-321: 20.0625em;
+$break-480: 30em;
+$break-600: 37.5em;
+$break-768: 48em;
+$break-980: 61.25em;
+$break-1024: 64em;
+$break-1200: 75em;
+$break-1224: 76.5em;
+$break-1280: 80em;
+$break-1366: 85.375em;
+$break-1824: 114em;
+
+// breakpoint mixin
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (min-width: $break-768) { @content; }
+  }
+
+  @else if $point == desktop {
+    @media (min-width: $break-1280) { @content; }
+  }
+
+  // Smartphones (portrait and landscape)
+  @else if $point == mobile {
+    @media only screen
+    and (min-device-width : $break-320)
+    and (max-device-width : $break-480) { @content; }
+  }
+
+   // Desktops and laptops
+  @else if $point == desktopLaptop {
+    @media only screen
+    and (min-width : $break-1224) { @content; }
+  }
+    // Large screens
+  @else if $point == desktopLarge {
+    @media only screen
+    and (min-width : $break-1824) { @content; }
+  }
+}
+.container {
+  width: 100%;
+
+  @include breakpoint(mobile) {
+    width: 95%;
+  }
+
+  @include breakpoint(tablet) {
+    width: 75%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+}

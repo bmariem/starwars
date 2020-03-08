@@ -1,11 +1,12 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 @import 'abstracts/variables';
+@import 'abstracts/grid';
 
 @import 'base/typography';
 
 @import 'layout/header';
 @import 'layout/navigation';
-@import 'layout/form';
+@import 'layout/footer';
 
-@import 'pages/edit';
+@import 'pages/home';

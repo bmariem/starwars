@@ -4,67 +4,151 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-        <%= htmlWebpackPlugin.options.title %>
-    </title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-
+    <!--Favicon here <link rel="shortcut icon" href="" />-->
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <a href="https://www.lelynx.fr" target="_blank" class="navbar-brand logo" title="LeLynx.fr">
-                <img src="./assets/images/logo.svg" alt="logo LeLynx.fr">
-            </a>
-            <a class="navbar-brand edit" href="#" title="Editer">
-                Modifier <span>mes informations</span>
-            </a>
-        </nav>
-        <div class="progressive-bar">
-            <div class="progress"></div>
-        </div>
-    </header>
-    <main class="edit-page">
         <div class="container">
             <div class="row">
-                <div class="col-3 col-lg-2 offset-lg-2">
-                    <a href="#" class="previous">
-                        <span class="back">retour</span>
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <button id="mobile-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav-content">
+                        <a href="#">LE COTÉ LUMINEUX</a>
+                        <a href="#">LE COTÉ OBSCUR</a>
+                        <a href="#">L’EMPIRE</a>
+                        <a href="#">LES DROÏDES</a>
+                        <a href="#">LES EWOKS</a>
+                        <a href="#">JABBA LE HUTT</a>
+                    </div>
+                </nav>
+                <img src="./assets/images/logo.png" alt="logo Star Wars" class="img-fluid logo" id="logo">
+            </div>
+        </div>
+    </header>
+
+    <main class="home-page">
+        <div class="container">
+            <div class="row main-content">
+                <div class="text">
+                    <h1>Star Wars, The Force Awakens</h1>
+                    <p>
+                        Plus de 30 ans après la bataille d'Endor, la
+                        galaxie n'en a pas fini avec la tyrannie et
+                        l’oppression. Les membres de l'Alliance
+                        rebelle, devenus la « Résistance »,
+                        combattent les vestiges de l'Empire réunis
+                        sous la bannière du « Premier Ordre ».
+                    </p>
+                    <p>
+                        Un mystérieux guerrier, Kylo Ren, semble
+                        vouer un culte à Dark Vador et pourchasse
+                        les ennemis du Premier Ordre à travers la
+                        galaxie. Au même moment, une jeune
+                        femme nommée Rey, pilleuse d'épaves sur la
+                        planète désertique Jakku, va faire la
+                        rencontre de Finn, un Stormtrooper en fuite,
+                        une rencontre qui bouleversera sa vie.
+                    </p>
+                    <p>
+                        Plus de 30 ans après la bataille d'Endor, la
+                        galaxie n'en a pas fini avec la tyrannie et
+                        l’oppression. Les membres de l'Alliance
+                        rebelle, devenus la « Résistance »,
+                        combattent les vestiges de l'Empire réunis
+                        sous la bannière du « Premier Ordre ».
+                    </p>
+                    <p>
+                        Un mystérieux guerrier, <a href="#" title="Kylo Ren" class="text-dark"><u>Kylo Ren</u></a>, semble
+                        vouer un culte à <a href="#" title="Dark Vador" class="text-dark"><u>Dark Vador</u></a> et pourchasse
+                        les ennemis du Premier Ordre à travers la
+                        galaxie. Au même moment, une jeune
+                        femme nommée Rey, pilleuse d'épaves sur la
+                        planète désertique Jakku, va faire la
+                        rencontre de Finn, un <a href="#" title="Stormtrooper" class="text-dark"><u>Stormtrooper</u></a> en fuite,
+                        une rencontre qui bouleversera sa vie.
+                    </p>
+                    <p>
+                        Plus de 30 ans après la bataille d'Endor, la
+                        galaxie n'en a pas fini avec la tyrannie et
+                        l’oppression. Les membres de l'Alliance
+                        rebelle, devenus la « <a href="#" title="Résistance" class="text-dark"><u>Résistance</u></a> »,
+                        combattent les vestiges de l'Empire réunis
+                        sous la bannière du « <a href="#" title="Premier Ordre" class="text-dark"><u>Premier Ordre</u></a> ».
+                    </p>
+                    <p>
+                        Un mystérieux guerrier, Kylo Ren, semble
+                        vouer un culte à <a href="#" title="Dark Vador" class="text-dark"><u>Dark Vador</u></a> et pourchasse
+                        les ennemis du Premier Ordre à travers la
+                        galaxie. Au même moment, une jeune
+                        femme nommée Rey, pilleuse d'épaves sur la
+                        planète désertique Jakku, va faire la
+                        rencontre de Finn, un Stormtrooper en fuite,
+                        une rencontre qui bouleversera sa vie.
+                    </p>
                 </div>
-                <div class="col-12 col-lg-5">
-                    <form>
-                        <div class="form-group">
-                            <label for="edit-date">Vivamus vehicula vulputate tortor eget tempus ?</label>
-                            <input type="text" class="form-control" id="edit-date" placeholder="DD/MM/YYYY" required
-                                   pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}" >
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <button type="submit" id="edit-validate" class="btn">Valider</button>
-                    </form>
+                <div class="publicity" >
+                    <img src="./assets/images/ad.jpg" alt="pub">
                 </div>
             </div>
         </div>
-
-        <div class="chat-bot">
-            <i class="fas fa-comment-dots icon fa-flip-horizontal"></i>
-            <p>Une question ?
-                <span>Parlez à un conseiller Lelynx.fr</span>
-            </p>
-            <a href="#" title="Fermer le chat">
-                <i class="fas fa-times icon"></i>
-            </a>
+        <div class="container-fluid">
+            <div class="pre-header"></div>
         </div>
-
-        <div class="fixed-bottom">
-            <a class="legal-notice" href="https://www.lelynx.fr/a-propos/fonctionnement/#ancre-2" title="Voir les Mentions légales">Mentions légales</a>
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <h2>A long time ago, in a galaxy far, far away…</h2>
+                </div>
+                <div class="content">
+                    <img src="./assets/images/r2d2_c3p0.jpg" alt="" class="img">
+                    <p><strong class="font-italic">La Guerre des étoiles</strong> (titre original <strong class="font-italic">Star Wars,</strong> soit littéralement <i>Guerres Stellaires</i> ) est une épopée cinématographique de scienceﬁction créée par George Lucas, considérée comme un élément phare du space opera. Prévue à la base pour être une suite de trois trilogies (triptyque), Lucas fut contraint, par manque de moyens techniques, de commencer par la seconde trilogie (l'<i>Épisode IV - Un nouvel espoir</i>) en 1977. La série connut un succès phénoménal partout dans le monde et engendra une très importante communauté de fans. Sans prétendre expliquer le succès du premier ﬁlm (s'il y avait une recette, cela se saurait), on peut, toutefois, noter que, malgré le manque de moyens (le budget était relativement modeste, les acteurs presque inconnus) :</p>
+                </div>
+                <div class="more-details">
+                    <p>- Il fait appel à des références connues et appréciées des jeunes de l'époque : ﬁlms de cape et d'épée, westerns, péplums, contes de fées et même <i>le Seigneur des Anneaux</i> de J.R.R. Tolkien ; cette œuvre n'apparaît pas comme de la science-ﬁction au sens strict mais plutôt comme du <i>space fantasy</i>.</p>
+                    <p>- Les eﬀets spéciaux, supervisés par Ken Ralston, étaient réellement novateurs, avec notamment la participation deJohn Dykstra (qui a également participé au premier ﬁlm de <i>Star Trek</i>), qui avait développé une nouvelle manière d'animer les maquettes des vaisseaux en coordonnant leurs mouvements par ordinateur (Dykstraﬂex).</p>
+                    <p>- Le ﬁlm a développé un univers cohérent, avec, comme préoccupation constante, autant la création d'une ambiance que l'action proprement dite. - La musique, composée par John Williams, introduit des thèmes récurrents et des leitmotivs (procédé classique mais renforçant la cohérence).</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="pre-footer"></div>
         </div>
     </main>
-    <!--<footer>Footer empty for now </footer>-->
+
+    <footer>
+        <div class="container">
+            <h4><strong>TM Lucasﬁlm</strong> Ltd. All Rights Reserved.</h4>
+            <div class="row">
+                <div class="grid">
+                    <ul>
+                        <li><a href="#"><u>Terms of Use</u></a></li>
+                        <li><a href="#"><u>Legal Notices</u></a></li>
+                        <li><a href="#"><u>Privacy Policy</u></a></li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <ul>
+                        <li><a href="#"><u>Your California Privacy Rights</u></a></li>
+                        <li><a href="#"><u>Star Wars at Disney Store</u></a></li>
+                        <li><a href="#"><u>Privacy Policy</u></a></li>
+                    </ul>
+                </div>
+                <div class="grid social-network">
+                    <h4>Follow star wars</h4>
+                    <div>
+                        <span class="icon fb mr-4"></span>
+                        <span class="icon twitter mr-4"></span>
+                        <span class="icon instagram"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

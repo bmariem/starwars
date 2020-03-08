@@ -1,0 +1,108 @@
+footer {
+    background:  rgba($black, .9) url("/assets/images/darthvader.jpg") top center no-repeat;
+    height: 20rem;
+    font-size: .8rem;
+
+    @include breakpoint(tablet) {
+        background: rgba($black, .9) url("/assets/images/darthvader_2x.jpg") top center no-repeat;
+        height: 20rem;
+        user-select: none;
+        font-size: 1.4rem;
+    }
+
+    .container {
+        padding-top: 1.5rem;
+
+        h4 {
+            color: $grey;
+            text-align: center;
+            padding: .5rem 0;
+            margin-bottom: .5rem;
+            font-size: 1.2rem;
+
+            @include breakpoint(tablet) {
+                padding: 1.5rem 0;
+                margin-bottom: 1.5rem;
+                font-size: 1.5rem;
+            }
+        }
+        .row {
+            padding-top: 1rem;
+
+            .grid {
+                flex: 0 0 50%;
+                max-width: 50%;
+
+                @include breakpoint(tablet) {
+                    flex: 0 0 33.33333%;
+                    max-width: 33.33333%;
+                }
+
+                ul {
+                    text-align: center;
+                    padding-left: 0;
+                    list-style: none;
+
+                    li {
+                        padding-bottom: .5rem;
+
+                        a {
+                            color: $grey;
+                        }
+                    }
+                }
+
+                &.social-network {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+
+                    @include breakpoint(tablet) {
+                        justify-content: start;
+                        flex-direction: column;
+                        flex: 0 0 33.33333%;
+                        max-width: 33.33333%;
+                    }
+                    > h4  {
+                        padding: 0;
+
+                        @include breakpoint(mobile) {
+                            margin: 0 1rem 0 0;
+                            font-size: .9rem;
+                        }
+                    }
+
+                    > div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        .icon {
+                            width: 2rem;
+                            height: 2rem;
+                            display: block;
+                            margin: 0 1rem 0 0;
+
+                            @include breakpoint(tablet) {
+                                margin: 0;
+                            }
+                            &.fb {
+                                background: url("/assets/images/icon_facebook.png") top center no-repeat;
+                            }
+
+                            &.twitter {
+                                background: url("/assets/images/icon_twitter.png") top center no-repeat;
+                            }
+
+                            &.instagram {
+                                background: url("/assets/images/icon_instagram.png") top center no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

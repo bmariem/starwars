@@ -65,7 +65,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Editer mes informations sur Lelynx.fr',
+            title: 'test technique PERITIS',
             template: './src/index.html',
             inject: true,
             minify: {
